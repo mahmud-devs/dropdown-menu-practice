@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.banner{
+    background:linear-gradient(rgba(0, 0, 0, 0.7) , rgba(0, 0, 0, 0.7)), url(../images/banner.jpg)  ;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100vh; 
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    width: 1170px;
+    margin: 0 auto;
+    
+}
+
+/*============nav bar start=============*/
+#nav{
+    background: linear-gradient( to right ,rgb(0, 153, 138), rgb(0, 93, 84)  )  ;
+    padding: 10px 0;
+}
+.nav_wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu{
+    display: flex;
+    column-gap: 40px;
+    
+}
+.menu li a{
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+}
+.menu li {
+    position: relative;
+}
+.dropdown{
+    background-color: #83c2bcb1;
+    position: absolute;
+    top: 60px;
+    left: 0px;
+    width: 150px;
+    padding: 15px 20px;
+    border-top: 3px solid rgb(22, 187, 237) ;
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;    
+    border-radius: 15%;  
+}
+.dropdown >li >a{
+    color: rgb(0, 0, 0);
+}
+.menu li:hover .dropdown{
+    visibility: visible;
+    opacity: 1;
+    top: 38px;
+}
+
+/*
+.home{
+    border-bottom: 3px solid red;
+}*/
+.dropdown > li{
+    position: relative;
+}
+.sub_dropdown{
+    position: absolute;
+    width: 163px;
+    right:-160px;
+    top: 60px;
+    background-color: rgba(92, 43, 43, 0.533);
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+    border-radius: 8%;
+    padding: 15px 20px;
+    border-top: 3px solid rgb(0, 0, 0) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;    
+    text-transform: capitalize;
+}
+.dropdown > li:hover .sub_dropdown{
+    visibility: visible;
+    opacity: 1;
+    top: 10px;
+}
+/*===========under line=========*/
+.menu > li::after{
+    content: '';
+    height: 3px;
+    width: 5px;
+    background: rgba(255, 255, 255, 0.722);
+    position:absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.3s;
+}
+.menu > li:hover::after{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.716);
+    transform: rotate(180deg);
+}
+
+.dropdown > li::after a{
+    content: '';
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.722);
+    position:absolute;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menu > li:hover::after .dropdown{
+    width: 100%;
+    background: rgba(0, 0, 0, 0.716);
+    transform: rotate(180deg);
+}
+
+
+/*===================fonts ====================*/
+
+.menu > li > a svg{
+    color: rgba(255, 255, 255, 0.733);
+    transition: all linear 0.3s;
+}
+.menu > li:hover > a svg{
+    color: rgba(0, 0, 0, 0.615);
+    transform: rotate(180deg);
+}
+.dropdown > li > a svg{
+    color: rgba(0, 0, 0, 0.733);
+    transition: all linear 0.3s;
+    transform: rotate(90deg);
+}
+.dropdown > li:hover > a svg{
+    color: rgba(89, 50, 50, 0.615);
+    transform: rotate(180deg);
+}
+
+.logo > img{
+    width: 150px;
+} 
+.sub_dropdown > li > a svg{
+    color: rgba(0, 0, 0, 0.932);
+    transition: all linear 0.3s;
+    transform: rotate(90deg);
+}
+
+.sub_dropdown > li:hover > a svg{
+    color: rgb(17, 0, 171);
+    transform: rotate(180deg);
+}
+
+
+/*==========================last part ===================*/
+.sub_dropdown > li{
+    position: relative;
+} 
+.sub_part{
+    position: absolute;
+    width: 160px;
+    right:-165px;
+    top: 30px;
+    background-color: rgba(45, 43, 92, 0.533);
+    visibility: hidden;
+    opacity: 0;
+    transition: all linear 0.3s;
+    border-radius: 8%;
+    padding: 15px 20px;
+    border-top: 3px solid rgb(21, 5, 85) ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 10px;    
+    text-transform: capitalize;
+}
+.sub_dropdown > li:hover .sub_part{
+    visibility: visible;
+    opacity: 1;
+    top: -50px;
+}
+/*
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: aliceblue;
+}
+
+.content h1{
+    font-size: 70px;
+    margin-top:80px ;
+}
+.content p{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+}  */
+
+
+/*
+.dropdown> li >a{
+    background:#000b0a8f ;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0s;
+}
+.dropdown > li :hover a{
+    width: 100%;
+}    */
+
